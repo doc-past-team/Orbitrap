@@ -22,9 +22,9 @@ Jupyter Notebooks for Orbitrap statistical tests:
      - Calculates and saves the allan deviation, hadamard deviation and power spectrum for a single injection '-sorted' file as '-allan'  
   - Plot-drift-stats:  
      - Produces 4 tiled plots for each isotopologue, using '-sorted' and '-allan' files from a single (long) injection:   
-    1. Autoreferenced delta for each scan  
-    2. 10 minute running mean delta  
-    3. Histogram showing delta distribution  
-    4. Allan deviation, Hadamard deviation and power spectrum  
+       1. Autoreferenced delta for each scan  
+       2. 10 minute running mean delta  
+       3. Histogram showing delta distribution  
+       4. Allan deviation, Hadamard deviation and power spectrum  
 
     
