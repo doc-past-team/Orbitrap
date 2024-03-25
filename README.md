@@ -1,19 +1,21 @@
 Jupyter Notebooks to process Orbitrap isotope data:  
   - Orbitrap-data-sort-bracketing:  
-    - Processes a 'Aditional-data' file output by Thermo R script for a sequence of injections, and calculates isotope deltas for each sample injection by bracketing, then conversion to international scale using known delta values of internal standard.   
+    - Processes a 'Aditional-data' file output by Thermo R script for a sequence of injections, and calculates isotope deltas for each sample injection by bracketing, then conversion to international scale using known delta values of internal standard.
+    - Requires nitrate standard data in 'references_nitrate.xlsx'   
     - Allows filtering of bad injections  
     - Calculates deltas from no-M0 data when given the internal deltas from the corresponding M0 experiment  
     - No delta scale calibration  
     - Saves a '-sorted' csv for each injection  
     - Outputs 'internal_deltas' (relative to std) and 'external_deltas' (relative to international scale) files, summarising all injections  
    - Orbitrap-delta-calibration:  
-     - Using the known delta values of any dried standards present in an 'extenal_deltas' file, calculates a 1-point, 2-point, or multiple-point linear regression for measured vs true delta values. Calibrates all samples.  
+     - Using the known delta values of any dried standards present in an 'extenal_deltas' file, calculates a 1-point, 2-point, or multiple-point linear regression for measured vs true delta values. Calibrates all samples.
+     - Requires nitrate standard data in 'references_nitrate.xlsx' 
      - Outputs a 'calibrated_deltas' file, with delta values of all samples.  
   - Orbitrap-results-collate:  
      - Collates M0 and no-M0 results for the same experiment, calculates capital deltas for MIF and clumps  
      - Saves in a single file  
   - Orbitrap-vs-IRMS:  
-     - Plots the comparison of IRMS isotope deltas with Orbitrap isotope deltas  
+     - Plots the comparison of IRMS isotope deltas (in CDD-IRMS.xlsx) with Orbitrap isotope deltas  
   
 Jupyter Notebooks for Orbitrap statistical tests:  
   - Allan-save:  
